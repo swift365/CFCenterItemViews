@@ -6,6 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/CFCenterItemViews.svg?style=flat)](http://cocoapods.org/pods/CFCenterItemViews)
 
 ## Example
+<img src="https://github.com/swift365/CFCenterItemViews/blob/master/Example/CFCenterItemViews/shot.png" />
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
