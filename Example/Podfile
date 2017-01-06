@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CFCenterItemViews_Example' do
+  pod 'CFCenterItemViews', :path => '../'
+
+  target 'CFCenterItemViews_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

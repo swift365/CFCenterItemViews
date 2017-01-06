@@ -1,0 +1,6 @@
+framework module CFCenterItemViews {
+  umbrella header "CFCenterItemViews-umbrella.h"
+
+  export *
+  module * { export * }
+}

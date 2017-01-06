@@ -1,0 +1,16 @@
+PODS:
+  - CFCenterItemViews (0.0.1)
+
+DEPENDENCIES:
+  - CFCenterItemViews (from `../`)
+
+EXTERNAL SOURCES:
+  CFCenterItemViews:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CFCenterItemViews: c84f094a3975c1a95f602511743d6457a29a5fb8
+
+PODFILE CHECKSUM: d4fd988c38057b9521fad60e82023d6b9fa9ca7d
+
+COCOAPODS: 1.1.1
