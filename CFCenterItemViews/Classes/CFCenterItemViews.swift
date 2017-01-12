@@ -61,19 +61,19 @@ public class CFCenterItemView: UIView {
       - parameter label: UILabel
       - Parameter gap: 文字与图片之间的间距
     */
-    public func setup(imageView:UIImageView,label:UILabel,gap:CGFloat){
-        self.addSubview(imageView)
+    public func setup(topView:UIView,label:UILabel,gap:CGFloat){
+        self.addSubview(topView)
         self.addSubview(label)
         
-        imageView.isUserInteractionEnabled = false
+        topView.isUserInteractionEnabled = false
         label.isUserInteractionEnabled = false
         
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        topView.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
         
-        let views: [String:Any] = ["view":self , "img":imageView,"lbl":label]
+        let views: [String:Any] = ["view":self , "top":topView,"lbl":label]
         
-        let imgH = NSLayoutConstraint(item: imageView,
+        let imgH = NSLayoutConstraint(item: topView,
                                       attribute: .centerX,
                                       relatedBy: .equal,
                                       toItem: self,
@@ -83,14 +83,14 @@ public class CFCenterItemView: UIView {
         
         label.sizeToFit() //原始label的大小(一定要有)
         
-        let top = (self.frame.size.height - imageView.frame.size.height - gap - label.frame.size.height) / 2.0
+        let top = (self.frame.size.height - topView.frame.size.height - gap - label.frame.size.height) / 2.0
         
-        let imgVV = "V:|-" + "\(top)" +  "-[img]"
+        let imgVV = "V:|-" + "\(top)" +  "-[top]"
         let imgV = NSLayoutConstraint.constraints(withVisualFormat: imgVV , options:NSLayoutFormatOptions.init(rawValue: 0), metrics: nil, views: views)
         
-        let lblV = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: imageView, attribute: .bottom, multiplier: 1.0, constant: gap)
+        let lblV = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: topView, attribute: .bottom, multiplier: 1.0, constant: gap)
         
-        let lblH = NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: imageView, attribute: .centerX, multiplier: 1.0, constant: 0)
+        let lblH = NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: topView, attribute: .centerX, multiplier: 1.0, constant: 0)
         
         self.addConstraints(imgV)
         self.addConstraint(imgH)

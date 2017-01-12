@@ -41,7 +41,7 @@ class ViewController: UIViewController {
             label.font = UIFont.systemFont(ofSize: 15)
             label.textColor = UIColor.black
             
-            itemView.setup(imageView: imageView, label: label, gap:10.0)
+            itemView.setup(topView: imageView, label: label, gap:10.0)
             
             items.append(itemView)
         }
